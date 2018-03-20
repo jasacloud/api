@@ -1,4 +1,5 @@
 <?PHP
+	namespace Api;
 	@session_start();
 	class Api extends Rest {
 	

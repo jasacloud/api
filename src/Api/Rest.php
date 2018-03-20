@@ -1,4 +1,5 @@
 <?PHP
+	namespace Api;
 	/* File : Rest.php
 		* Author : GST
 	*/
