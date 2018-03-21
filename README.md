@@ -1,7 +1,8 @@
 # api
 Configuration for nginx web server.
 
-Add the your project :
+Add the your project
+
 example :
 
     <?PHP
