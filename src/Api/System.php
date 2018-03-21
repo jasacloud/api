@@ -1,4 +1,7 @@
 <?PHP
+	namespace Api;
+	use \Logger\Logger as Logger;
+	use \DBManager\DBManager as DBManager;
 	class System extends Api{
 		private $data_source;
 		private $version = "1.0";
