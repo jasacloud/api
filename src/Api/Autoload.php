@@ -6,7 +6,7 @@
  * @author    Jasacloud <account at jasacloud dot com>
  * @license   MIT License
  */
-class Autoload
+class Api_Autoload
 {
     /**
      * @var string
@@ -41,12 +41,19 @@ class Autoload
      */
     public function autoload($class)
     {
-        if (0 !== strpos($class, 'Api')) {
-            return;
-        }
-
+        
         if (file_exists($file = $this->dir.'/'.str_replace('\\', '/', $class).'.php')) {
             require $file;
         }
+		else{
+			echo "Class $class not found";
+			exit;
+		}
     }
 }
+
+
+if (!class_exists('Api_Autoload')) {
+    require dirname(__FILE__) . '/Autoload.php';
+}
+Api_Autoload::register(true);
