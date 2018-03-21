@@ -1,7 +1,5 @@
 <?php
 
-namespace Api;
-
 /**
  * Autoloads Api classes
  *
@@ -27,7 +25,7 @@ class Autoload
     }
 
     /**
-     * Registers Api\Autoload as an SPL autoloader.
+     * Registers Api as an SPL autoloader.
      */
     public static function register($dir = null)
     {

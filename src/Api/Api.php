@@ -1,7 +1,4 @@
 <?PHP
-	namespace Api;
-	use \Logger\Logger as Logger;
-	
 	@session_start();
 	class Api extends Rest {
 	
