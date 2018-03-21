@@ -2,10 +2,12 @@
 Configuration for nginx web server :
 Add the your project :
 example :
+
+    <?PHP
     // /location/index.php:
     $api = new Api();
-	$api->processApi();
-
+    $api->processApi();
+    ?>
 
 Modify your nginx config :
 
