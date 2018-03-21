@@ -1,5 +1,6 @@
 # api
-Configuration for nginx web server :
+Configuration for nginx web server.
+
 Add the your project :
 example :
 
