@@ -1,9 +1,9 @@
 <?php
 
-namespace Files;
+namespace Api;
 
 /**
- * Autoloads Files classes
+ * Autoloads Api classes
  *
  * @author    Jasacloud <account at jasacloud dot com>
  * @license   MIT License
@@ -27,7 +27,7 @@ class Autoload
     }
 
     /**
-     * Registers Files\Autoload as an SPL autoloader.
+     * Registers Api\Autoload as an SPL autoloader.
      */
     public static function register($dir = null)
     {
@@ -43,7 +43,7 @@ class Autoload
      */
     public function autoload($class)
     {
-        if (0 !== strpos($class, 'Files')) {
+        if (0 !== strpos($class, 'Api')) {
             return;
         }
 
