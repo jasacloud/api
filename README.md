@@ -1,8 +1,16 @@
 # api
 Configuration for nginx web server :
+Add the your project :
+example :
+    // /location/index.php:
+    $api = new Api();
+	$api->processApi();
+
+
+Modify your nginx config :
 
     location = /api {
-        rewrite ^(.*)$ "/classes/index.php";
+        rewrite ^(.*)$ "/location/index.php";
     }
     
     location ~ /api/ {
