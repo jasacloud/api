@@ -16,5 +16,5 @@ Modify your nginx config :
     }
     
     location ~ /api/ {
-        rewrite /api/([\._0-9a-zA-Z]+)/?([\._0-9a-zA-Z]+)/?[.*]?/?[.*]? /classes/index.php?kind=$2%23$1;
+        rewrite /api/([\._0-9a-zA-Z]+)/?([\._0-9a-zA-Z]+)/?[.*]?/?[.*]? /location/index.php?kind=$2%23$1;
     }
