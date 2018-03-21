@@ -1,5 +1,4 @@
 <?PHP
-	namespace Api;
 	class System extends Api{
 		private $data_source;
 		private $version = "1.0";
