@@ -52,4 +52,4 @@ class Api_Autoload
 if (!class_exists('Api_Autoload')) {
     require dirname(__FILE__) . '/Autoload.php';
 }
-Api_Autoload::register(true);
+Api_Autoload::register();
