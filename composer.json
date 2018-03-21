@@ -1,18 +1,19 @@
 {
     "name": "jasacloud/api",
-    "description": "Library for handle request and response api",
-    "keywords": ["Jasacloud","Api"],
+    "description": "Library to handle request and response",
+    "keywords": ["Jasacloud", "Api", "Library"],
     "type": "library",
-    "license": "MIT",
-    "require": {
-        "php": ">=7.0"
-    },
+    "homepage": "https://github.com/jasacloud/api",
+    "license": "GPL-3.0-or-later",
     "authors": [{
-        "name": "Dwi BudUt",
-        "email": "dwi@jasacloud.com",
-        "homepage": "https://www.jasacloud.com"
-    }],
-    "homepage": "http://github.com/jasacloud/api",
+	    "name": "Dwi BudUt",
+	    "email": "dwi@jasacloud.com",
+	    "homepage": "https://www.jasacloud.com",
+	    "role": "Developer"
+	}],
+    "require": {
+        "php": ">=5.4"
+    },
     "autoload": {
         "psr-0": {
             "Api": "src/"
