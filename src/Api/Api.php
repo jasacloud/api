@@ -174,6 +174,10 @@
 		private function json($data){
 			if(is_array($data)){
 				//return json_encode($data, JSON_PRETTY_PRINT);
+				if(isset($this->_data_input->callback) && !empty($this->_data_input->callback)){
+					$this->_content_type = "application/javascript";
+					return $this->_data_input->callback . '('.json_encode($data).')';
+				}
 				return json_encode($data);
 			}
 			else{

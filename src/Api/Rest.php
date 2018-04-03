@@ -152,10 +152,11 @@
 		private function inputs(){
 			switch($this->get_request_method()){
 				case "POST":
+					$this->_data_get = (object)$this->cleanInputs($_GET);
 					$this->_data_post = (object)$this->cleanInputs($_POST);
 					$this->_data_input = json_decode($this->getInput());
 					if($this->_data_input){
-						$this->_data_input->kind = isset($_GET['kind']) ? $_GET['kind'] : $this->_data_input->kind;
+						$this->_data_input->kind = isset($this->_data_get->kind) ? $this->_data_get->kind : $this->_data_input->kind;
 					}
 				break;
 				case "GET":
