@@ -2480,7 +2480,7 @@
 			}
 		}
 		
-		public function view($dir, $data=null){
+		public static function view($dir, $data=null){
 			$smarty = new Smarty();
 			if (isset($data)) {
 			  if (is_array($data)) {
