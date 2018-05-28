@@ -2385,10 +2385,10 @@
 			if($name!=NULL){
 				if(isset(HTTP_SERVER[$name])){
 					if($uri){
-						return HTTP_SERVER[$name]["protocol"]."://".HTTP_SERVER[$name]["host"].":".HTTP_SERVER[$name]["port"]."/".HTTP_SERVER[$name]["uri"];
+						return HTTP_SERVER[$name]["protocol"]."://".HTTP_SERVER[$name]["host"]. (HTTP_SERVER[$name]["port"]=='443' && HTTP_SERVER[$name]["protocol"]=='https' ? '' : ":".HTTP_SERVER[$name]["port"]) ."/".HTTP_SERVER[$name]["uri"];
 					}
 					
-					return HTTP_SERVER[$name]["protocol"]."://".HTTP_SERVER[$name]["host"].":".HTTP_SERVER[$name]["port"];
+					return HTTP_SERVER[$name]["protocol"]."://".HTTP_SERVER[$name]["host"] . (HTTP_SERVER[$name]["port"]=='443' && HTTP_SERVER[$name]["protocol"]=='https' ? '' : ":".HTTP_SERVER[$name]["port"]);
 				}
 			}
 			
