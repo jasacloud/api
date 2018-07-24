@@ -331,6 +331,7 @@
 		}
 		
 		public static function redirect($location){
+			$location = trim(preg_replace('/\s\s+/', '', $location));
 			header("Location: ".$location);
 			exit;
 		}
