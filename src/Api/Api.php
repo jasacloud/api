@@ -336,6 +336,13 @@
 			exit;
 		}
 		
+		public static function error($code, $msg){
+			return [
+				"code"=>"". $code ."",
+				"message"=> "". $msg .""
+			];
+		}
+		
 		public function __destruct(){
 			if($this->dbobj != NULL){
 				$this->dbobj->close();
