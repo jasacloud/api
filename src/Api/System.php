@@ -1640,6 +1640,35 @@
 			}
 		}
 		
+		/* convertUTCTime('2017-01-01 01:00:00','7'); @return '2017-01-01T01:00:00Z' */
+		public function convertUTCTime($strdate,$timezone_source=null){
+			if($timezone_source){
+				if(in_array($timezone_source, timezone_identifiers_list())){
+					//do nothing 
+				}else if(is_int($timezone_source)){
+					$timezone_source = $timezone_source < 0 ?  strval($timezone_source) : '+'.$timezone_source;
+				}else if(is_string($timezone_source)){
+					$timezone_source = (int)$timezone_source;
+					$timezone_source = $timezone_source < 0 ?  strval($timezone_source) : '+'.$timezone_source;
+				}else{
+					$date = new DateTime($strdate);
+					$date->setTimezone(new DateTimeZone('UTC'));
+					
+					return $date->format("Y-m-d\TH:i:s\Z");
+				}
+				
+				$date = new DateTime($strdate,new DateTimeZone($timezone_source));
+				$date->setTimezone(new DateTimeZone('UTC'));
+				
+				return $date->format("Y-m-d\TH:i:s\Z");
+			}else{
+				$date = new DateTime($strdate);
+				$date->setTimezone(new DateTimeZone('UTC'));
+				
+				return $date->format("Y-m-d\TH:i:s\Z");
+			}
+		}
+		
 		/* yyyy-mm-ddThh:ii:ss.ms~3Z */
 		public function getDateTimeZ($t=null){
 			date_default_timezone_set('UTC');
