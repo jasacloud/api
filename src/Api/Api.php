@@ -63,7 +63,14 @@
 					echo $this->response($this->json($this->data_response), 200);
 				}
 				else{
-					$return = array("return"=>"error","returnmessage"=>"Method not found!");
+					$return = [
+						"returnval"=>false,
+						"error"=>[
+							"code"=>"404",
+							"message"=>"Not Found",
+							"message_details"=>"Method not found for $class::$method"
+						]
+					];
 					
 					return $this->response($this->json($return),404);
 				}
@@ -88,7 +95,14 @@
 					echo $this->response($this->json($this->data_response), 200);
 				}
 				else{
-					$return = array("return"=>"error","returnmessage"=>"Method not found!");
+					$return = [
+						"returnval"=>false,
+						"error"=>[
+							"code"=>"404",
+							"message"=>"Not Found",
+							"message_details"=>"Method not found for $class::$method"
+						]
+					];
 					
 					return $this->response($this->json($return),404);
 				}
@@ -116,7 +130,14 @@
 					echo $this->response($this->json($this->data_response), 200);
 				}
 				else{
-					$return = array("return"=>"error","returnmessage"=>"Method not found!");
+					$return = [
+						"returnval"=>false,
+						"error"=>[
+							"code"=>"404",
+							"message"=>"Not Found",
+							"message_details"=>"Method not found for $class::$method"
+						]
+					];
 					
 					return $this->response($this->json($return),404);
 				}
@@ -124,11 +145,15 @@
 			else{
 				// CREATE LOGGER FOR ERROR HANDLE :
 				$this->create_log_Server();
-				$return = array(
-					'return'=>'E0001',
-					'returnmessage'=>'You not have authorized to access this page directly, Please read the API documentation!'
-				);
-				$this->response($this->json($return),404); // If the method not exist with in this class, response would be 'Page not found'.
+				$return = [
+					"returnval"=>false,
+					"error"=>[
+						"code"=>"404",
+						"message"=>"Not Found",
+						"message_details"=>"Service not found or You not authorized to access this page directly. Please read the API documentation!"
+					]
+				];
+				return $this->response($this->json($return),404); // If the method not exist with in this class, response would be 'Page not found'.
 			}
 		}
 		
@@ -336,11 +361,17 @@
 			exit;
 		}
 		
-		public static function error($code, $msg){
-			return [
+		public static function error($code, $msg, $message_details=null){
+			
+			$return = [
 				"code"=>"". $code ."",
 				"message"=> "". $msg .""
 			];
+			if($message_details){
+				$return["message_details"] = $message_details;
+			}
+			
+			return $return;
 		}
 		
 		public function __destruct(){
