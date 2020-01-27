@@ -1,4 +1,5 @@
 <?PHP
+	require_once '../../vendor/autoload.php';
 	@session_start();
 	class Api extends Rest {
 	
@@ -60,7 +61,7 @@
 					//add log :
 					$this->logTR();
 					
-					echo $this->response($this->json($this->data_response), 200);
+					echo $this->response($this->json($this->data_response), (http_response_code()!=200 ? http_response_code() : 200));
 				}
 				else{
 					$return = [
@@ -92,7 +93,7 @@
 					//add log :
 					$this->logTR();
 					
-					echo $this->response($this->json($this->data_response), 200);
+					echo $this->response($this->json($this->data_response), (http_response_code()!=200 ? http_response_code() : 200));
 				}
 				else{
 					$return = [
@@ -127,7 +128,7 @@
 					//add log :
 					$this->logTR();
 					
-					echo $this->response($this->json($this->data_response), 200);
+					echo $this->response($this->json($this->data_response), (http_response_code()!=200 ? http_response_code() : 200));
 				}
 				else{
 					$return = [
@@ -268,7 +269,7 @@
 		// ISO 7064 Mod 97,10
 		// @return concat number + checksum -- to check (return%$mod==1)
 		public function addChecksumNum($num, $mod){
-			$ck = (($mod+1)-(($numb*100)%$mod))%$mod;
+			$ck = (($mod+1)-(($num*100)%$mod))%$mod;
 			return $num.$ck;
 		}
 		

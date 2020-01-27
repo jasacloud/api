@@ -1,0 +1,153 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d5f697ea29cb4292cf0ca02cea9b1bb2",
+    "packages": [
+        {
+            "name": "jasacloud/dbmanager",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasacloud/dbmanager.git",
+                "reference": "1f3d228e682da5a3d535fdd103ffdcabc6597529"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasacloud/dbmanager/zipball/1f3d228e682da5a3d535fdd103ffdcabc6597529",
+                "reference": "1f3d228e682da5a3d535fdd103ffdcabc6597529",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/DBManager/Autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dwi BudUt",
+                    "email": "dwi@jasacloud.com",
+                    "homepage": "https://www.jasacloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library to handle Database Manager",
+            "homepage": "https://github.com/jasacloud/dbmanager",
+            "keywords": [
+                "Jasacloud",
+                "dbmanager",
+                "library"
+            ],
+            "time": "2018-12-17T02:05:48+00:00"
+        },
+        {
+            "name": "jasacloud/logger",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasacloud/logger.git",
+                "reference": "7467d8d90b1ee9ef94dde6da8af91fb508f0cd6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasacloud/logger/zipball/7467d8d90b1ee9ef94dde6da8af91fb508f0cd6d",
+                "reference": "7467d8d90b1ee9ef94dde6da8af91fb508f0cd6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Logger/Autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dwi BudUt",
+                    "email": "dwi@jasacloud.com",
+                    "homepage": "https://www.jasacloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library to handle logger request",
+            "homepage": "https://github.com/jasacloud/logger",
+            "keywords": [
+                "Jasacloud",
+                "library",
+                "logger"
+            ],
+            "time": "2018-03-21T10:20:41+00:00"
+        },
+        {
+            "name": "jasacloud/mcmanager",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasacloud/mcmanager.git",
+                "reference": "f658b263e170d9ced746cce83cd58eb4107dc583"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasacloud/mcmanager/zipball/f658b263e170d9ced746cce83cd58eb4107dc583",
+                "reference": "f658b263e170d9ced746cce83cd58eb4107dc583",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/MCManager/Autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dwi BudUt",
+                    "email": "dwi@jasacloud.com",
+                    "homepage": "https://www.jasacloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library to handle Memacached Manager",
+            "homepage": "https://github.com/jasacloud/mcmanager",
+            "keywords": [
+                "Jasacloud",
+                "MCManager",
+                "library",
+                "memcached"
+            ],
+            "time": "2018-03-26T02:00:34+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}
