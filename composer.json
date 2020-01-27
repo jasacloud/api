@@ -1,23 +1,31 @@
 {
-    "name": "jasacloud/api",
-    "description": "Library to handle request and response",
-    "keywords": ["Jasacloud", "Api", "Library"],
-    "type": "library",
-    "homepage": "https://github.com/jasacloud/api",
-    "license": "GPL-3.0-or-later",
-    "authors": [{
-	    "name": "Dwi BudUt",
-	    "email": "dwi@jasacloud.com",
-	    "homepage": "https://www.jasacloud.com",
-	    "role": "Developer"
-	}],
-    "require": {
+	"name": "jasacloud/api",
+	"description": "Library to handle request and response",
+	"keywords": [
+		"Jasacloud",
+		"Api",
+		"Library"
+	],
+	"type": "library",
+	"homepage": "https://github.com/jasacloud/api",
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Dwi BudUt",
+			"email": "dwi@jasacloud.com",
+			"homepage": "https://www.jasacloud.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
 		"php": ">=5.4",
 		"jasacloud/logger": "^1.0",
 		"jasacloud/dbmanager": "^1.0",
 		"jasacloud/mcmanager": "^1.0"
-    },
-    "autoload": {
-        "files": ["src/Api/Autoload.php"]
-    }
+	},
+	"autoload": {
+		"files": [
+			"src/Api/Autoload.php"
+		]
+	}
 }
