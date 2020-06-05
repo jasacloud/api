@@ -1,5 +1,4 @@
 <?PHP
-	require_once '../../vendor/autoload.php';
 	/* File : Rest.php
 		* Author : GST
 	*/

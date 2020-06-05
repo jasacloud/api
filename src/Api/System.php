@@ -1,5 +1,4 @@
 <?PHP
-	require_once '../../vendor/autoload.php';
 	class System extends Api{
 		private $data_source;
 		private $version = "1.0";
