@@ -280,7 +280,7 @@
 			for($i=0; $i<strlen($string);$i++){
 				$checksum = $checksum + (ord($string[$i]) * 13);
 			}
-			$checksum = $checksum.'';
+      $checksum = $checksum.'';
 			while(strlen($checksum)>$length){
 				for($i=0;$i<strlen($checksum);$i++){
 					$checksum_temp = $checksum_temp + $checksum[$i];
@@ -334,7 +334,9 @@
 		
 		public static function getClientIp() {
 			$ipaddress = '';
-			if (getenv('HTTP_CLIENT_IP'))
+			if (getenv('HTTP_X_ORIGINAL_FORWARDED_FOR'))
+				$ipaddress = getenv('HTTP_X_ORIGINAL_FORWARDED_FOR');
+			else(getenv('HTTP_CLIENT_IP'))
 				$ipaddress = getenv('HTTP_CLIENT_IP');
 			else if(getenv('HTTP_X_FORWARDED_FOR'))
 				$ipaddress = getenv('HTTP_X_FORWARDED_FOR');
